@@ -1,13 +1,8 @@
 "use client";
 import * as React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Radio, RadioGroup, Stack } from "@chakra-ui/react";
-
-enum Numbers {
-  ONE = "ONE",
-  TWO = "TWO",
-  THREE = "THREE",
-}
+import { Radio, RadioGroup } from "@chakra-ui/react";
+import { Numbers } from "./types";
 
 export default function Home() {
   const [value, setValue] = React.useState<Numbers>(Numbers.ONE);
