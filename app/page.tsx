@@ -2,10 +2,10 @@
 import * as React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
-import { Numbers } from "./types";
+import { NUMBERS, Numbers } from "./types";
 
 export default function Home() {
-  const [value, setValue] = React.useState<Numbers>(Numbers.ONE);
+  const [value, setValue] = React.useState<Numbers>('ONE');
 
   console.log(value);
   return (
@@ -14,9 +14,9 @@ export default function Home() {
         onChange={(nextValue) => setValue(nextValue as Numbers)}
         value={value}
       >
-        <Radio value={Numbers.ONE}>First</Radio>
-        <Radio value={Numbers.TWO}>Second</Radio>
-        <Radio value={Numbers.THREE}>Third</Radio>
+        <Radio value={NUMBERS.ONE}>First</Radio>
+        <Radio value={NUMBERS.TWO}>Second</Radio>
+        <Radio value={NUMBERS.THREE}>Third</Radio>
       </RadioGroup>
     </ChakraProvider>
   );
